@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/36c231ebaa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text"></div>
+            <p>Web Designer</p>
+            <h1>Hi I am <span>Shorn</span><br> Mike From Kenya Nairobi</h1>
+    </div>
+</div>
+<!------------about---------->   
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+            <img src="images/user.png" >
+        </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>My name is Michael,a student learning about Web Development.I Have already known three programming language;HTML,CSS and Javascript.Planning also to be a software Engineer.I am passionate in playing Rugby,Editting Vedio and Typing.</p>
+                <div class="tab-titles">
+                    <p class="tab-link active-link " onclick="opentab('skills')">Skills</p>
+                    <p class="tab-link active-link " onclick="opentab('experience')">Experience</p>
+                    <p class="tab-link active-link" onclick="opentab('education')">Education</p>
+                    
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                   <ul>
+                      <li><span>Web Designer</span><br> Designing Web</li>
+                      <li><span>Photo Editor</span><br> Photo Edition</li>
+                      <li><span>Playing Rugby</span><br> Player</li>
+                   </ul>
+                </div>
+                <div class="tab-contents " id="Experience">
+                   <ul>
+                      <li><span>2025 - Current</span><br>Web Development at Shield</li>
+                      <li><span>2021 - 2024</span><br> Embu Highschool</li>
+                      <li><span>2013- 2020</span><br> RedRose Primary</li>
+                   </ul>
+                </div>
+                 <div class="tab-contents " id="Education">
+                   <ul>
+                      <li><span>2025 - Current</span><br>Web Development at Shield</li>
+                      <li><span>2021 - 2024</span><br> Embu Highschool</li>
+                      <li><span>2013- 2020</span><br> RedRose Primary</li>
+                   </ul>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------Services------------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Building Websites for affordable price.Passionate of it a desired to know more.</p>
+                <a href="#">learn more</a>
+            </div>
+             <div>
+                <h2>Player</h2>
+                <p>A rugby player passionate of playing rugby offer training for props.</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------portfolio------------->
+<div id="portfolio">
+    <div class="container">
+       <h1 class="sub-title">My Work</h1>
+       <div class="work-list">
+           <div class="work">
+               <img src="images/work-1.png" >
+               <div class="layer">
+                   <h3>G Wagon</h3>
+                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero nulla animi maxime, iure non modi natus, sint voluptates enim quo minus, sit eius nemo quia repellendus at impedit quaerat praesentium!</p>
+               </div>
+
+            </div>
+            <div class="work">
+                <img src="images/work-2.png" > 
+                <div class="layer">         
+                   <h3>G Wagon</h3>
+                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero nulla animi maxime, iure non modi natus, sint voluptates enim quo minus, sit eius nemo quia repellendus at impedit quaerat praesentium!</p> 
+                </div>
+            </div>
+            <div class="work">
+               <img src="images/work-3.png" >  
+               <div class="layer">   
+                   <h3>G Wagon</h3>
+                   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero nulla animi maxime, iure non modi natus, sint voluptates enim quo minus, sit eius nemo quia repellendus at impedit quaerat praesentium!</p>
+               </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!--------------contact--------------------->
+<div id="contact">
+    <div class="contain">
+        <div class="row">
+            <div class="contact-left">
+                <h1  class="sub-title">Contact Me</h1>
+                <p>mike@gmail.com</p>
+                <p>0792080671</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/mikeshornT633"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/mikeshornT633"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-left"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablink = document.getElementByClassName("tab-link");
+    var tabcontents = document.getElementByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+         for(tacontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classlist.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
